@@ -13,7 +13,7 @@
 
 3. 运行项目
 
-   ` ionic serve` 可以让你的引用跑着浏览器上
+   ` ionic serve` 可以让你的应用跑着浏览器上
 
 4. 添加运行环境（容器）
 
@@ -88,6 +88,31 @@
   npm config set sharp_libvips_binary_host "https://npmmirror.com/mirrors/sharp-libvips"
   ```
 
-  
+## 在手机中运行你的项目
+  ### 生成你的原生项目
+    + 使用capacitor(推荐：项目自带)  
 
-+ 是
+      生成Android项目：
+        `ionic capacitor add android`  
+
+      生成iOS项目：
+        `ionic capacitor add ios`
+
+      设置包ID：
+        对于`capacitor`请打开`capacitor.config.json`文件并修改`appId`属性.
+    
+    + 使用Cordova  
+
+      生成Android项目：
+        `ionic cordova prepare android`  
+
+      生成iOS项目：
+        `ionic cordova prepare ios`
+     
+      设置包ID：
+      对于Cordova，打开`config.xml`文件并修改标识符根元素的属性，<widget>
+  
+  ### 同步代码至已有项目
+    + 更新本机平台项目以包含新添加的插件
+      `ionic cap sync`
+      会把新改动的代码更新同步至本机原生项目中

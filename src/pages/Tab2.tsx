@@ -1,8 +1,14 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { useModel } from '@modern-js-reduck/react';
+import { Button, Input } from 'antd-mobile';
+import { useState } from 'react';
+import moneyModel from '../model/money';
 import './Tab2.css';
 
 const Tab2: React.FC = () => {
+  const [, actions] = useModel(moneyModel)
+  const [moneyValue, setMoneyValue] = useState('')
+
   return (
     <IonPage>
       <IonHeader>
@@ -16,7 +22,18 @@ const Tab2: React.FC = () => {
             <IonTitle size="large">Tab 2</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 2 page" />
+        <Input
+          placeholder='请输入内容'
+          clearable
+          onChange={val => setMoneyValue(val)}
+        />
+        <Button
+          block
+          color='primary'
+          onClick={() => { actions.add(Number(moneyValue)) }}
+        >
+          加钱
+        </Button>
       </IonContent>
     </IonPage>
   );

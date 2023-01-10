@@ -1,3 +1,4 @@
+import { Provider } from '@modern-js-reduck/react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -6,7 +7,9 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 const container = document.getElementById('root');
 const root = createRoot(container!);
 root.render(
-    <App />
+    <Provider config={{ devTools: false }}>
+        <App />
+    </Provider>
 );
 
 // If you want your app to work offline and load faster, you can change

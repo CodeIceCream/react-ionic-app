@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { BluetoothLE as ble } from "@awesome-cordova-plugins/bluetooth-le";
 
 export const useBtInit = () => {

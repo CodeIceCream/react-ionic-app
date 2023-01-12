@@ -1,7 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react'
 import React from 'react'
 import { RouteComponentProps } from 'react-router'
-import ExploreContainer from '../components/ExploreContainer'
 
 const Money: React.FC<RouteComponentProps> = (props) => {
   return (
@@ -17,7 +16,6 @@ const Money: React.FC<RouteComponentProps> = (props) => {
             <IonTitle size="large">My Money</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="My Money page" />
       </IonContent>
     </IonPage>
   )

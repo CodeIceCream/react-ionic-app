@@ -5,13 +5,13 @@ interface CountModel {
   currencyType: string
 }
 
-const moneyModel = model<CountModel>('count').define({
+const moneyModel = model<CountModel>('moneyModel').define({
   state: {
     currencyValue: 1.66,
     currencyType: '$'
   },
   actions: {
-    add(state, payload) {
+    addMoney(state, payload) {
       state.currencyValue += payload
     }
   }

@@ -10,8 +10,8 @@ import moneyModel from '../model/money';
 import './Tab1.css';
 
 
-const Tab1: React.FC<RouteComponentProps> = (props) => {
-  const [state] = useModel(moneyModel)
+const Tab1: React.FC<RouteComponentProps> = () => {
+  const [moneyState] = useModel(moneyModel)
 
   const router = useIonRouter()
 
@@ -33,15 +33,14 @@ const Tab1: React.FC<RouteComponentProps> = (props) => {
             <IonTitle size="large">Tab 1</IonTitle>
           </IonToolbar>
         </IonHeader>
-
-        <List header='可点击列表'>
-          <List.Item prefix={<UnorderedListOutline />} onClick={() => { goMoney() }}>
+        <List mode='card'>
+          <List.Item prefix={<UnorderedListOutline />} onClick={() => { }}>
             账单
           </List.Item>
           <List.Item
             prefix={<PayCircleOutline />}
-            description={state.currencyValue}
-            onClick={() => { }}>
+            description={moneyState.currencyValue}
+            onClick={goMoney}>
             总资产
           </List.Item>
           <List.Item prefix={<SetOutline />} onClick={() => { }}>

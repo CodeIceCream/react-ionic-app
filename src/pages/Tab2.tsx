@@ -1,6 +1,5 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import Download from '../component/DownLoad';
-import './Tab2.css';
 
 const Tab2: React.FC = () => {
 

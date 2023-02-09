@@ -40,7 +40,7 @@ const App: React.FC = () => {
             <Route exact path='/tab1/money' component={Money}/>
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
-            <IonTabButton tab="tab1" href="/tab1/?name=tom">
+            <IonTabButton tab="tab1" href="/tab1">
               <IonIcon icon={triangle} />
               <IonLabel>Tab 1</IonLabel>
             </IonTabButton>

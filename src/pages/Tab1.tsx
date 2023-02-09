@@ -7,7 +7,6 @@ import {
 } from 'antd-mobile-icons';
 import { RouteComponentProps } from 'react-router';
 import moneyModel from '../model/money';
-import './Tab1.css';
 
 
 const Tab1: React.FC<RouteComponentProps> = () => {

@@ -5,6 +5,7 @@ import { HandPayCircleOutline } from 'antd-mobile-icons';
 import React, { useState } from 'react';
 import { RouteComponentProps } from 'react-router';
 import moneyModel from '../model/money';
+import styles from './Money.module.scss'
 
 const Money: React.FC<RouteComponentProps> = () => {
   const [, { addMoney }] = useModel(moneyModel)
@@ -37,6 +38,7 @@ const Money: React.FC<RouteComponentProps> = () => {
             description='充值金额可能会延迟到账'
           />
           <Input
+            className={styles.input}
             placeholder='请输入充值金额'
             clearable
             value={moneyValue}

@@ -1,15 +1,19 @@
 import { Provider } from '@modern-js-reduck/react';
+import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
+import './i18n';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
 root.render(
-    <Provider config={{ devTools: false }}>
-        <App />
-    </Provider>
+    <Suspense fallback='loading...'>
+        <Provider config={{ devTools: false }}>
+            <App />
+        </Provider>
+    </Suspense>
 );
 
 // If you want your app to work offline and load faster, you can change

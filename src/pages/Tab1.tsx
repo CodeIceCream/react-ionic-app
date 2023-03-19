@@ -5,13 +5,14 @@ import {
   PayCircleOutline,
   SetOutline, UnorderedListOutline
 } from 'antd-mobile-icons';
+import { useTranslation } from 'react-i18next';
 import { RouteComponentProps } from 'react-router';
 import moneyModel from '../model/money';
 
 
 const Tab1: React.FC<RouteComponentProps> = () => {
+  const { t } = useTranslation()
   const [moneyState] = useModel(moneyModel)
-
   const router = useIonRouter()
 
   const goMoney = () => {
@@ -43,10 +44,9 @@ const Tab1: React.FC<RouteComponentProps> = () => {
             总资产
           </List.Item>
           <List.Item prefix={<SetOutline />} onClick={() => { }}>
-            设置
+            {t('my.setting')}
           </List.Item>
         </List>
-
       </IonContent>
     </IonPage>
   );

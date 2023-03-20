@@ -10,13 +10,13 @@ import { RouteComponentProps } from 'react-router';
 import moneyModel from '../model/money';
 
 
-const Tab1: React.FC<RouteComponentProps> = () => {
+const My: React.FC<RouteComponentProps> = () => {
   const { t } = useTranslation()
   const [moneyState] = useModel(moneyModel)
   const router = useIonRouter()
 
   const goMoney = () => {
-    router.push('/tab1/money')
+    router.push('/my/money')
   }
 
 
@@ -24,13 +24,13 @@ const Tab1: React.FC<RouteComponentProps> = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>{t('my.title')}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">{t('my.title')}</IonTitle>
           </IonToolbar>
         </IonHeader>
         <List mode='card'>
@@ -52,4 +52,4 @@ const Tab1: React.FC<RouteComponentProps> = () => {
   );
 };
 
-export default Tab1;
+export default My;

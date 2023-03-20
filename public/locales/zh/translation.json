@@ -1,5 +1,25 @@
 {
+  "tabBar": {
+    "home":"主页",
+    "toolkit":"工具",
+    "my":"我的"
+  },
+  "home": {
+    "title":"主页"
+  },
+  "toolkit": {
+    "title":"工具箱"
+  },
   "my": {
+    "title":"我的",
+    "bill":"账单",
     "setting":"设置"
+  },
+  "property": {
+    "title":"资产",
+    "prompt":"充值提示",
+    "tips": "充值金额会延迟到账",
+    "placeholder":"请输入充值金额",
+    "recharge":"充值"
   }
 }

@@ -1,24 +1,27 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ContributionCard from '../component/ContributionCard';
+import { useTranslation } from 'react-i18next';
+import Download from '../component/DownLoad';
 
-const Tab3: React.FC = () => {
+const Toolkit: React.FC = () => {
+  const { t } = useTranslation()
+
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 3</IonTitle>
+          <IonTitle>{t("toolkit.title")}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 3</IonTitle>
+            <IonTitle size="large">{t("toolkit.title")}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ContributionCard />
+        <Download />
       </IonContent>
-    </IonPage>
+    </IonPage >
   );
 };
 
-export default Tab3;
+export default Toolkit;

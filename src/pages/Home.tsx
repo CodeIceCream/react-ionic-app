@@ -1,25 +1,27 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import Download from '../component/DownLoad';
+import { useTranslation } from 'react-i18next';
+import ContributionCard from '../component/ContributionCard';
 
-const Tab2: React.FC = () => {
+const Home: React.FC = () => {
+  const { t } = useTranslation()
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 2</IonTitle>
+          <IonTitle>{t('home.title')}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 2</IonTitle>
+            <IonTitle size="large">{t('home.title')}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <Download />
+        <ContributionCard />
       </IonContent>
-    </IonPage >
+    </IonPage>
   );
 };
 
-export default Tab2;
+export default Home;

@@ -1,5 +1,25 @@
 {
+  "tabBar": {
+    "home":"Home",
+    "toolkit":"Toolkit",
+    "my":"My"
+  },
+  "home": {
+    "title":"Home"
+  },
+  "toolkit": {
+    "title":"Toolkit"
+  },
   "my": {
+    "title":"my",
+    "bill":"bill",
     "setting":"Setting"
+  },
+  "property": {
+    "title":"Property",
+    "prompt":"Recharge Prompt",
+    "tips": "The recharge amount will be delayed",
+    "placeholder":"Recharge amount",
+    "recharge":"Recharge"
   }
 }

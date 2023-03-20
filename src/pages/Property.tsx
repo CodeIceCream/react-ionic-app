@@ -3,11 +3,13 @@ import { useModel } from '@modern-js-reduck/react';
 import { Button, Input, Result, Space } from 'antd-mobile';
 import { HandPayCircleOutline } from 'antd-mobile-icons';
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { RouteComponentProps } from 'react-router';
 import moneyModel from '../model/money';
-import styles from './Money.module.scss'
+import styles from './Property.module.scss';
 
-const Money: React.FC<RouteComponentProps> = () => {
+const Property: React.FC<RouteComponentProps> = () => {
+  const { t } = useTranslation()
   const [, { addMoney }] = useModel(moneyModel)
   const [moneyValue, setMoneyValue] = useState('')
 
@@ -21,25 +23,26 @@ const Money: React.FC<RouteComponentProps> = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>My Money</IonTitle>
+          <IonTitle>{t('property.title')}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">My Money</IonTitle>
+            <IonTitle size="large">{t('property.title')}</IonTitle>
           </IonToolbar>
         </IonHeader>
         <Space block direction='vertical'>
           <Result
             icon={<HandPayCircleOutline />}
             status='warning'
-            title='充值提示'
-            description='充值金额可能会延迟到账'
+            title={t('property.prompt')}
+            description={t('property.tips')}
           />
           <Input
             className={styles.input}
-            placeholder='请输入充值金额'
+            // placeholder={t('property.placeholder')}
+            // Todo
             clearable
             value={moneyValue}
             onChange={val => setMoneyValue(val)}
@@ -49,7 +52,7 @@ const Money: React.FC<RouteComponentProps> = () => {
             color='primary'
             onClick={recharge}
           >
-            充值
+            {t('property.recharge')}
           </Button>
         </Space>
       </IonContent>
@@ -57,4 +60,4 @@ const Money: React.FC<RouteComponentProps> = () => {
   )
 }
 
-export default Money
+export default Property

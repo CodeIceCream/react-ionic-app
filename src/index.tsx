@@ -1,10 +1,10 @@
 import { Provider } from '@modern-js-reduck/react';
 import { Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
-import App from './App';
-import './i18n';
-import reportWebVitals from './reportWebVitals';
-import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import 'i18n';
+import * as serviceWorkerRegistration from 'serviceWorkerRegistration';
+import reportWebVitals from 'reportWebVitals';
+import App from 'App';
 
 const container = document.getElementById('root');
 const root = createRoot(container!);

@@ -41,8 +41,7 @@ const Property: React.FC<RouteComponentProps> = () => {
           />
           <Input
             className={styles.input}
-            // placeholder={t('property.placeholder')}
-            // Todo
+            placeholder={t('property.placeholder') as string}
             clearable
             value={moneyValue}
             onChange={val => setMoneyValue(val)}

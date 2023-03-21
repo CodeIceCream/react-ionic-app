@@ -1,9 +1,9 @@
 import { Card } from 'antd-mobile';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
-import { CoalCar } from '../svg/CoalCar';
-import { PineTree } from '../svg/PineTree';
-import { Smokestack } from '../svg/Smokestack';
+import { CoalCar } from 'svg/CoalCar';
+import { PineTree } from 'svg/PineTree';
+import { Smokestack } from 'svg/Smokestack';
 import styles from './ContributionCard.module.scss';
 
 interface ContributionItemProps {

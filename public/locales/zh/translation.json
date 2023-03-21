@@ -21,5 +21,13 @@
     "tips": "充值金额会延迟到账",
     "placeholder":"请输入充值金额",
     "recharge":"充值"
+  },
+  "contribution": {
+    "title":"社会贡献",
+    "saveCoal":"节约标准煤",
+    "emissionReduction":"CO₂减排量",
+    "equivalentPlanting":"等效植树量",
+    "trees":"颗",
+    "ton":"吨"
   }
 }

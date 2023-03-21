@@ -21,5 +21,13 @@
     "tips": "The recharge amount will be delayed",
     "placeholder":"Recharge amount",
     "recharge":"Recharge"
+  },
+  "contribution": {
+    "title":"Social Contribution",
+    "saveCoal":"SaveCoal",
+    "emissionReduction":"EmissionReduction",
+    "equivalentPlanting":"EquivalentPlanting",
+    "trees":"trees",
+    "ton":"ton"
   }
 }

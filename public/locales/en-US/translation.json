@@ -12,7 +12,8 @@
   },
   "my": {
     "title":"my",
-    "bill":"bill",
+    "bill":"Bill",
+    "language":"Language",
     "setting":"Setting"
   },
   "property": {

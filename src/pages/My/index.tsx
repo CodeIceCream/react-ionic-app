@@ -3,11 +3,13 @@ import { useModel } from '@modern-js-reduck/react';
 import { List } from 'antd-mobile';
 import {
   PayCircleOutline,
-  SetOutline, UnorderedListOutline
+  SetOutline
 } from 'antd-mobile-icons';
 import { useTranslation } from 'react-i18next';
 import { RouteComponentProps } from 'react-router';
-import moneyModel from '../model/money';
+import moneyModel from '../../model/money';
+import Bill from './Bill';
+import Language from './Language';
 
 
 const My: React.FC<RouteComponentProps> = () => {
@@ -34,15 +36,14 @@ const My: React.FC<RouteComponentProps> = () => {
           </IonToolbar>
         </IonHeader>
         <List mode='card'>
-          <List.Item prefix={<UnorderedListOutline />} onClick={() => { }}>
-            账单
-          </List.Item>
+          <Bill />
           <List.Item
             prefix={<PayCircleOutline />}
             description={moneyState.currencyValue}
             onClick={goMoney}>
             总资产
           </List.Item>
+          <Language />
           <List.Item prefix={<SetOutline />} onClick={() => { }}>
             {t('my.setting')}
           </List.Item>

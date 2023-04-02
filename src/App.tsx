@@ -10,13 +10,13 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { homeOutline, medkitOutline, personOutline } from 'ionicons/icons';
-import Home from 'pages/Home';
-import My from 'pages/My';
-import Property from 'pages/Property';
-import Toolkit from 'pages/Toolkit';
 import { useTranslation } from 'react-i18next';
 import { Redirect, Route } from 'react-router-dom';
 import './App.css';
+import Home from './pages/Home';
+import My from './pages/My';
+import Property from './pages/Property';
+import Toolkit from './pages/Toolkit';
 
 setupIonicReact();
 

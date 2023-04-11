@@ -1,10 +1,11 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, useIonRouter } from '@ionic/react';
+import { useIonRouter } from '@ionic/react';
 import { useModel } from '@modern-js-reduck/react';
 import { List } from 'antd-mobile';
 import {
   PayCircleOutline,
   SetOutline
 } from 'antd-mobile-icons';
+import { IonTemplate } from 'component/IonTemplate';
 import { useTranslation } from 'react-i18next';
 import { RouteComponentProps } from 'react-router';
 import moneyModel from '../../model/money';
@@ -23,19 +24,8 @@ const My: React.FC<RouteComponentProps> = () => {
 
 
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>{t('my.title')}</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">{t('my.title')}</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <List mode='card'>
+    <IonTemplate title={t('my.title')}>
+      <List mode='card'>
           <Bill />
           <List.Item
             prefix={<PayCircleOutline />}
@@ -48,8 +38,7 @@ const My: React.FC<RouteComponentProps> = () => {
             {t('my.setting')}
           </List.Item>
         </List>
-      </IonContent>
-    </IonPage>
+    </IonTemplate>
   );
 };
 

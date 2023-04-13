@@ -34,7 +34,7 @@
   + 在你的项目中找到`package.json`，找到`script`的`test`字段，更新为以下内容
   ```json
   {
-    test: "react-scripts test --transformIgnorePatterns 'node_modules/(?!(@ionic/react|@ionicreact-router|@ionic/core|@stencil/core|ionicons)/)'"
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(@ionic/react|@ionicreact-router|@ionic/core|@stencil/core|ionicons)/)'"
   }
   
   ```

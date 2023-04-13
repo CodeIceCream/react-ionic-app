@@ -33,7 +33,10 @@
       `npm install @ionic/react@6 @ionic/react-router@6`
   + 在你的项目中找到`package.json`，找到`script`的`test`字段，更新为以下内容
   ```json
-  test: "react-scripts test --transformIgnorePatterns 'node_modules/(?!(@ionic/react|@ionicreact-router|@ionic/core|@stencil/core|ionicons)/)'"
+  {
+    test: "react-scripts test --transformIgnorePatterns 'node_modules/(?!(@ionic/react|@ionicreact-router|@ionic/core|@stencil/core|ionicons)/)'"
+  }
+  
   ```
 
 + 在你的引用中导入和调用 `setupIonicReact`，开发人员必须导入并调用`setupIonicReact`，即使他们没有设置自定义配置。(最新项目模板已有)

@@ -6,7 +6,7 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-  setupIonicReact
+  setupIonicReact,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { homeOutline, medkitOutline, personOutline } from 'ionicons/icons';
@@ -21,7 +21,7 @@ import Toolkit from './pages/Toolkit';
 setupIonicReact();
 
 const App: React.FC = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
     <IonApp>
@@ -38,7 +38,7 @@ const App: React.FC = () => {
             <Route exact path="/">
               <Redirect to="/home" />
             </Route>
-            <Route exact path='/my/money' component={Property} />
+            <Route exact path="/my/money" component={Property} />
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
             <IonTabButton tab="home" href="/home">
@@ -58,5 +58,5 @@ const App: React.FC = () => {
       </IonReactRouter>
     </IonApp>
   );
-}
+};
 export default App;

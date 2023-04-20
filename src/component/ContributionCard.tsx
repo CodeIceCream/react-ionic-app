@@ -10,11 +10,11 @@ interface ContributionItemProps {
   icon: ReactNode;
   value: number;
   unit: string;
-  description: string
+  description: string;
 }
 
 const ContributionItem = (props: ContributionItemProps) => {
-  const { icon, value, unit, description } = props
+  const { icon, value, unit, description } = props;
 
   return (
     <div className={styles.card}>
@@ -27,45 +27,40 @@ const ContributionItem = (props: ContributionItemProps) => {
         <div className={styles.description}>{description}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 const ContributionCard = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   const contributions: ContributionItemProps[] = [
     {
       icon: <CoalCar />,
       value: 18.8,
       unit: t('contribution.ton'),
-      description: t('contribution.saveCoal')
+      description: t('contribution.saveCoal'),
     },
     {
       icon: <Smokestack />,
       value: 20.8,
       unit: t('contribution.ton'),
-      description: t('contribution.emissionReduction')
+      description: t('contribution.emissionReduction'),
     },
     {
       icon: <PineTree />,
       value: 11,
       unit: t('contribution.trees'),
-      description: t('contribution.equivalentPlanting')
+      description: t('contribution.equivalentPlanting'),
     },
-  ]
+  ];
 
   return (
-    <Card
-      title={t('contribution.title')}
-      bodyClassName={styles.container}
-    >
-      {
-        contributions.map(contribution => (
-          <ContributionItem key={contribution.description} {...contribution} />
-        ))
-      }
+    <Card title={t('contribution.title')} bodyClassName={styles.container}>
+      {contributions.map((contribution) => (
+        <ContributionItem key={contribution.description} {...contribution} />
+      ))}
     </Card>
-  )
-}
+  );
+};
 
-export default ContributionCard
+export default ContributionCard;

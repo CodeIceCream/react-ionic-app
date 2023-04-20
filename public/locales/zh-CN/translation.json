@@ -1,34 +1,34 @@
 {
   "tabBar": {
-    "home":"主页",
-    "toolkit":"工具",
-    "my":"我的"
+    "home": "主页",
+    "toolkit": "工具",
+    "my": "我的"
   },
   "home": {
-    "title":"主页"
+    "title": "主页"
   },
   "toolkit": {
-    "title":"工具箱"
+    "title": "工具箱"
   },
   "my": {
-    "title":"我的",
-    "bill":"账单",
-    "setting":"设置",
-    "language":"语言"
+    "title": "我的",
+    "bill": "账单",
+    "setting": "设置",
+    "language": "语言"
   },
   "property": {
-    "title":"资产",
-    "prompt":"充值提示",
+    "title": "资产",
+    "prompt": "充值提示",
     "tips": "充值金额会延迟到账",
-    "placeholder":"请输入充值金额",
-    "recharge":"充值"
+    "placeholder": "请输入充值金额",
+    "recharge": "充值"
   },
   "contribution": {
-    "title":"社会贡献",
-    "saveCoal":"节约标准煤",
-    "emissionReduction":"CO₂减排量",
-    "equivalentPlanting":"等效植树量",
-    "trees":"颗",
-    "ton":"吨"
+    "title": "社会贡献",
+    "saveCoal": "节约标准煤",
+    "emissionReduction": "CO₂减排量",
+    "equivalentPlanting": "等效植树量",
+    "trees": "颗",
+    "ton": "吨"
   }
 }

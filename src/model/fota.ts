@@ -1,15 +1,15 @@
-import { model } from "@modern-js-reduck/react";
+import { model } from '@modern-js-reduck/react';
 
 interface FotaModel {
   latestVersion: {
-    isForce: boolean
-  }
+    isForce: boolean;
+  };
 }
 
 const fotaModel = model<FotaModel>('FotaModel').define({
   state: {
-    isForce: true
+    isForce: true,
   },
-})
+});
 
-export default fotaModel
+export default fotaModel;

@@ -1,9 +1,15 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from "@ionic/react";
-import { ReactNode } from "react";
+import {
+  IonContent,
+  IonHeader,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+} from '@ionic/react';
+import { ReactNode } from 'react';
 
 interface IonTemplateProps {
-  title: ReactNode
-  children: ReactNode
+  title: ReactNode;
+  children: ReactNode;
 }
 
 export function IonTemplate({ title, children }: IonTemplateProps) {
@@ -22,7 +28,6 @@ export function IonTemplate({ title, children }: IonTemplateProps) {
         </IonHeader>
         {children}
       </IonContent>
-    </IonPage >
-  )
+    </IonPage>
+  );
 }
-

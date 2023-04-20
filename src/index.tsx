@@ -5,16 +5,16 @@ import { createRoot } from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-import './i18n'
+import './i18n';
 
 const container = document.getElementById('root');
 const root = createRoot(container!);
 root.render(
-    <Suspense fallback='loading...'>
-        <Provider config={{ devTools: false }}>
-            <App />
-        </Provider>
-    </Suspense>
+  <Suspense fallback="loading...">
+    <Provider config={{ devTools: false }}>
+      <App />
+    </Provider>
+  </Suspense>
 );
 
 // If you want your app to work offline and load faster, you can change

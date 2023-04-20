@@ -1,34 +1,34 @@
 {
   "tabBar": {
-    "home":"Home",
-    "toolkit":"Toolkit",
-    "my":"My"
+    "home": "Home",
+    "toolkit": "Toolkit",
+    "my": "My"
   },
   "home": {
-    "title":"Home"
+    "title": "Home"
   },
   "toolkit": {
-    "title":"Toolkit"
+    "title": "Toolkit"
   },
   "my": {
-    "title":"my",
-    "bill":"Bill",
-    "language":"Language",
-    "setting":"Setting"
+    "title": "my",
+    "bill": "Bill",
+    "language": "Language",
+    "setting": "Setting"
   },
   "property": {
-    "title":"Property",
-    "prompt":"Recharge Prompt",
+    "title": "Property",
+    "prompt": "Recharge Prompt",
     "tips": "The recharge amount will be delayed",
-    "placeholder":"Recharge amount",
-    "recharge":"Recharge"
+    "placeholder": "Recharge amount",
+    "recharge": "Recharge"
   },
   "contribution": {
-    "title":"Social Contribution",
-    "saveCoal":"SaveCoal",
-    "emissionReduction":"EmissionReduction",
-    "equivalentPlanting":"EquivalentPlanting",
-    "trees":"trees",
-    "ton":"ton"
+    "title": "Social Contribution",
+    "saveCoal": "SaveCoal",
+    "emissionReduction": "EmissionReduction",
+    "equivalentPlanting": "EquivalentPlanting",
+    "trees": "trees",
+    "ton": "ton"
   }
 }

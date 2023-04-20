@@ -1,8 +1,8 @@
 interface Forecast {
-  adcode: string;//"440307"
+  adcode: string; //"440307"
   casts: Cast[];
-  city: string;//"龙岗区"
-  province: string;//"广东"
+  city: string; //"龙岗区"
+  province: string; //"广东"
   reporttime: string; // "2023-04-16 00:00:46"
 }
 
@@ -19,27 +19,28 @@ type Cast = {
   nightweather: string; //"多云"
   nightwind: string; //"东北"
   week: string; // "6"
-}
+};
 
 const parameters = {
   key: '4710354cd3da06d65f6003903000e5b8', // 开发者Key
-  city: '440300',  // adcode 北京：110101
+  city: '440300', // adcode 北京：110101
   extensions: 'all', // base:返回实况天气 all:返回预报天气
   output: 'json', // json|xml
-}
+};
 
 export function weatherSerivces(): Promise<Forecast[]> {
   return new Promise((resolve, reject) => {
-    fetch(`https://restapi.amap.com/v3/weather/weatherInfo?city=${parameters.city}&extensions=${parameters.extensions}&key=${parameters.key}`)
-      .then(response => response.json())
-      .then(data => {
+    fetch(
+      `https://restapi.amap.com/v3/weather/weatherInfo?city=${parameters.city}&extensions=${parameters.extensions}&key=${parameters.key}`
+    )
+      .then((response) => response.json())
+      .then((data) => {
         console.log(data);
-        resolve(data.forecasts)
+        resolve(data.forecasts);
       })
-      .catch(e => {
+      .catch((e) => {
         console.error('fetch weatherInfo fail', JSON.stringify(e));
-        reject(e)
+        reject(e);
       });
-  })
+  });
 }
-

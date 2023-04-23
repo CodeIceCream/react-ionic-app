@@ -1,0 +1,30 @@
+{
+  "env": { // 指定全局变量
+    "browser": true,
+    "es6": true
+  },
+  "parser": "@typescript-eslint/parser", // 配置 TypeScript 解析器
+  "extends": [
+    "plugin:react/recommended",
+    "prettier"
+  ],
+  "parserOptions": { // 支持ES Module 
+    "sourceType": "module",
+    "ecmaVersion": 2019,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [ // 启用插件
+    "react"
+  ],
+  "rules": { // 配置规则
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

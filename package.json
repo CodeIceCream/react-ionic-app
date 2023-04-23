@@ -80,6 +80,8 @@
   },
   "devDependencies": {
     "@capacitor/cli": "4.5.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-react": "^7.32.2",
     "prettier": "2.8.7"
   },
   "description": "An Ionic project"

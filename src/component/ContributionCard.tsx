@@ -1,5 +1,6 @@
 import { Card } from 'antd-mobile';
-import { ReactNode } from 'react';
+import { reqContribution } from 'api';
+import { ReactNode, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { CoalCar } from '../svg/CoalCar';
 import { PineTree } from '../svg/PineTree';
@@ -30,25 +31,39 @@ const ContributionItem = (props: ContributionItemProps) => {
   );
 };
 
+interface Contribution {
+  saveCoal: number;
+  emissionReduction: number;
+  equivalentPlanting: number;
+}
+
 const ContributionCard = () => {
   const { t } = useTranslation();
+  const [contribution, setContribution] = useState<Contribution>();
+
+  useEffect(() => {
+    reqContribution()
+      .then((resp) => resp.data)
+      .then((data) => setContribution(data))
+      .catch((error) => console.error('fetch contribution Error', error));
+  }, []);
 
   const contributions: ContributionItemProps[] = [
     {
       icon: <CoalCar />,
-      value: 18.8,
+      value: contribution?.saveCoal ?? 0,
       unit: t('contribution.ton'),
       description: t('contribution.saveCoal'),
     },
     {
       icon: <Smokestack />,
-      value: 20.8,
+      value: contribution?.emissionReduction ?? 0,
       unit: t('contribution.ton'),
       description: t('contribution.emissionReduction'),
     },
     {
       icon: <PineTree />,
-      value: 11,
+      value: contribution?.equivalentPlanting ?? 0,
       unit: t('contribution.trees'),
       description: t('contribution.equivalentPlanting'),
     },

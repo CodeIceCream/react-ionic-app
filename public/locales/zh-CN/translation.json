@@ -13,6 +13,7 @@
   "my": {
     "title": "我的",
     "bill": "账单",
+    "property":"总资产",
     "setting": "设置",
     "language": "语言"
   },
@@ -30,5 +31,13 @@
     "equivalentPlanting": "等效植树量",
     "trees": "颗",
     "ton": "吨"
+  },
+  "weather": {
+    "entry": "天气",
+    "title": "天气"
+  },
+  "sentence": {
+    "entry": "每日一言",
+    "title": "每日一言"
   }
 }

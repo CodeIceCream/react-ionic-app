@@ -13,6 +13,7 @@
   "my": {
     "title": "my",
     "bill": "Bill",
+    "property": "property",
     "language": "Language",
     "setting": "Setting"
   },
@@ -30,5 +31,13 @@
     "equivalentPlanting": "EquivalentPlanting",
     "trees": "trees",
     "ton": "ton"
+  },
+  "weather": {
+    "entry": "weather",
+    "title": "weather"
+  },
+  "sentence": {
+    "entry": "sentence",
+    "title": "sentence"
   }
 }

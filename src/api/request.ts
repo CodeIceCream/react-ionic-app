@@ -27,6 +27,7 @@ requests.interceptors.response.use(
   },
   (error: any) => {
     // 失败回调
+    nProgress.done();
     return Promise.reject(new Error('req fail', error));
   }
 );

@@ -23,7 +23,7 @@
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "antd": "^5.4.2",
-    "antd-mobile": "^5.26.0",
+    "antd-mobile": "^5.30.0",
     "axios": "^1.4.0",
     "cordova-plugin-bluetoothle": "^6.7.1",
     "history": "^4.9.0",
@@ -82,6 +82,7 @@
   },
   "devDependencies": {
     "@capacitor/cli": "4.5.0",
+    "@types/nprogress": "^0.2.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-react": "^7.32.2",
     "prettier": "2.8.7"

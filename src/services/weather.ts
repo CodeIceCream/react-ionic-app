@@ -28,14 +28,13 @@ const parameters = {
   output: 'json', // json|xml
 };
 
-export function weatherSerivces(): Promise<Forecast[]> {
+export function weatherSerivce(): Promise<Forecast[]> {
   return new Promise((resolve, reject) => {
     fetch(
       `https://restapi.amap.com/v3/weather/weatherInfo?city=${parameters.city}&extensions=${parameters.extensions}&key=${parameters.key}`
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         resolve(data.forecasts);
       })
       .catch((e) => {

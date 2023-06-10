@@ -25,7 +25,7 @@ function Language() {
     console.log(lang);
     console.log(i18n.language);
 
-    i18n.changeLanguage(lang[0]!);
+    i18n.changeLanguage(lang[0] as string);
   };
 
   const getLanguageLabel = (lang: string) => {

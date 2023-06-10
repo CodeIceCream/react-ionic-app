@@ -1,14 +1,17 @@
 import { Toast } from 'antd-mobile';
+import { IonTemplate } from 'component/IonTemplate';
 import { useEffect, useState } from 'react';
-import { weatherSerivces } from 'services/weather';
+import { useTranslation } from 'react-i18next';
+import { weatherSerivce } from 'services/weather';
 
-export function Weather() {
+export const Weather = () => {
+  const { t } = useTranslation();
   const [weather, setWeather] = useState('');
   const [city, setCity] = useState('');
 
   async function fetchWeatherData() {
     try {
-      const forecastData = await weatherSerivces();
+      const forecastData = await weatherSerivce();
       const todayCast = forecastData[0].casts[0];
       setWeather(todayCast.dayweather);
       setCity(forecastData[0].city);
@@ -21,5 +24,9 @@ export function Weather() {
     fetchWeatherData();
   }, []);
 
-  return <div>{city + weather}</div>;
-}
+  return (
+    <IonTemplate title={t('weather.title')}>
+      <div>{city + weather}</div>;
+    </IonTemplate>
+  );
+};

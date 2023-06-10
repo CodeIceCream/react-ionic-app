@@ -2,10 +2,10 @@ import { useModel } from '@modern-js-reduck/react';
 import { Button, Input, Result, Space } from 'antd-mobile';
 import { HandPayCircleOutline } from 'antd-mobile-icons';
 import { IonTemplate } from 'component/IonTemplate';
+import moneyModel from 'model/money';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { RouteComponentProps } from 'react-router';
-import moneyModel from '../model/money';
 import styles from './Property.module.scss';
 
 const Property: React.FC<RouteComponentProps> = () => {

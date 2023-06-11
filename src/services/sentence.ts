@@ -40,7 +40,9 @@ export function sentenceService(
   typeArr: SentenceType[]
 ): Promise<SentenceInfo> {
   return new Promise((resolve, reject) => {
-    fetch(`https://v1.hitokoto.cn${sentenceType2QuerySting(typeArr)}`)
+    fetch(
+      `https://v1.hitokoto.cn${sentenceType2QuerySting(typeArr)}&max_length=25`
+    )
       .then((response) => response.json())
       .then((data) => {
         resolve(data);

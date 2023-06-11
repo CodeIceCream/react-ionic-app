@@ -1,0 +1,88 @@
+.container {
+  --typewriting-animation-timing: step(30);
+  display: flex;
+  --word-width: 30em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-size: cover;
+    background-image: url(//www.todaybing.com/api/today/cn?size=mhd);
+
+  .textBox {
+    background-color: rgba(0, 0, 0, .5);
+    padding: 20px;
+    border-radius: 10px;
+
+    @keyframes typewriting {
+      0% {
+        width: 1px;
+      }
+
+      20% {
+        width: 1px;
+      }
+
+      40% {
+        width: var(--word-width);
+      }
+
+      60% {
+        width: var(--word-width);
+      }
+
+      80% {
+        width: 1px;
+      }
+
+      100% {
+        width: 1px;
+      }
+    }
+
+    .text {
+      position: relative;
+      width: 0;
+      max-width: 100%;
+      overflow: hidden;
+      color: #fff;
+      font-size: 16px;
+      line-height: 20px;
+      white-space: nowrap;
+      animation: typewriting 12s var(--typewriting-animation-timing) infinite;
+
+      @keyframes cursor {
+        from {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+        }
+      }
+
+      &::after {
+        content: '';
+        width: 2px;
+        height: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        animation: cursor 1s ease-in-out infinite;
+      }
+    }
+  }
+
+  .fromBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #fff;
+  }
+}

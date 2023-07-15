@@ -14,7 +14,6 @@ i18n
   // 配置参数的文档: https://www.i18next.com/overview/configuration-options
   .init({
     debug: false,
-    fallbackLng: 'en',
     interpolation: {
       escapeValue: false,
     },

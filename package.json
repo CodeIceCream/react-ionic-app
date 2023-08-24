@@ -10,8 +10,8 @@
     "@capacitor/haptics": "4.1.0",
     "@capacitor/keyboard": "4.1.0",
     "@capacitor/status-bar": "4.1.0",
-    "@ionic/react": "^7.0.12",
-    "@ionic/react-router": "^7.0.12",
+    "@ionic/react": "^7.3.1",
+    "@ionic/react-router": "^7.3.1",
     "@modern-js-reduck/react": "^1.1.5",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^13.3.0",
@@ -66,18 +66,6 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
     ]
   },
   "devDependencies": {
